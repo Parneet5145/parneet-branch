@@ -1,0 +1,11 @@
+const path = require('path');
+
+// npx sequelize db:migrate
+// npx sequelize db:migrate:undo:all
+
+module.exports = {
+  "config": path.resolve(`${__dirname}/src/db-migration/dbconfig.js`),
+  // "models-path": path.resolve(`${__dirname}/src/models`),
+  // "seeders-path": path.resolve(`${__dirname}/src/db-migration/seeders`),
+  "migrations-path": path.resolve(`${__dirname}/src/db-migration/migrations`)
+};
