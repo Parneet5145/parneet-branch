@@ -23,16 +23,34 @@ const User = sequelize.define(
           type: Sq.STRING,
           defaultValue: null,
         },
-        user_type: { 
-          type: Sq.ENUM('Admin', 'User'),
+        password: {
+          type: Sq.STRING,
           defaultValue: null,
         },
+
+        user_type: { 
+          type: Sq.ENUM('Admin', 'vendor'),
+          defaultValue: "vendor",
+        },
+        email_verified_at:{
+          type: Sq.DATE,
+          defaultValue: null,
+        },
+        reset_password_expires:{
+          type: Sq.DATE,
+          defaultValue: null,
+        },
+        user_status:{
+          defaultValue: true,
+          type: Sq.BOOLEAN,
+        }
     },
     {
         timestamps: true,
         freezeTableName: true,
         createdAt: "created_at",
         updatedAt: "updated_at",
+        deleted_at: "deleted_at",
     }
 );
 

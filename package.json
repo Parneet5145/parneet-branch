@@ -18,10 +18,13 @@
   },
   "homepage": "https://github.com/dinesh-brihaspatitech/custom-checkout-nodejs#readme",
   "dependencies": {
+    "bcrypt": "^5.1.0",
     "dotenv": "^16.0.3",
     "express": "^4.18.2",
+    "jsonwebtoken": "^8.5.1",
     "nodemon": "^2.0.20",
     "pg": "^8.8.0",
+    "pug": "^3.0.2",
     "sequelize": "^6.26.0",
     "sequelize-cli": "^6.5.2"
   }

@@ -21,11 +21,15 @@ app.use(require("./src"));
 app.set("view engine", "pug");
 app.set("views", path.join(__dirname, "views"));
 
+//set public folder path
+app.use(express.static(__dirname + '/public'));
+
 /*** Get port from environment and store in Express. ***/
 const port = process.env.PORT || "8013";
 app.listen(port, function () {
     console.log(`App started on port ${port}`);
 });
+
 
 /*** Create HTTP server. ***/
 var http = require("http");
